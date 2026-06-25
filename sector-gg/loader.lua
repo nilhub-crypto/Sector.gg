@@ -1,8 +1,7 @@
 -- Sector.gg Universal Loader
--- Usage: loadstring(game:HttpGet("https://raw.githubusercontent.com/nilhub-crypto/Sector.gg/main/loader.lua"))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/nilhub-crypto/Sector.gg/refs/heads/main/sector-gg/loader.lua"))()
 
-local GITHUB_RAW = "https://raw.githubusercontent.com/nilhub-crypto/Sector.gg/main"
-local HttpGet = syn and syn.request or (http and http.request) or request
+local GITHUB_RAW = "https://raw.githubusercontent.com/nilhub-crypto/Sector.gg/refs/heads/main/sector-gg"
 
 local function fetch(url)
     local ok, res = pcall(function()
@@ -12,7 +11,6 @@ local function fetch(url)
     return nil
 end
 
--- Detect current game
 local gameId = tostring(game.PlaceId)
 local configUrl = GITHUB_RAW .. "/games/" .. gameId .. "/config.json"
 local configRaw = fetch(configUrl)
@@ -25,7 +23,6 @@ end
 local HttpService = game:GetService("HttpService")
 local config = HttpService:JSONDecode(configRaw)
 
--- Load the GUI engine
 local guiUrl = GITHUB_RAW .. "/core/gui.lua"
 local guiSource = fetch(guiUrl)
 if not guiSource then warn("[Sector.gg] Failed to load GUI engine") return end
