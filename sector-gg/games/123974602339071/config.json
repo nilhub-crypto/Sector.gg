@@ -1,0 +1,28 @@
+{
+  "gameName": "Blox Fruits",
+  "version": "1.0.0",
+  "tabs": [
+    {
+      "name": "Combat",
+      "buttons": [
+        { "name": "Auto Farm",    "desc": "Farm nearby mobs", "type": "toggle" },
+        { "name": "Kill Aura",    "desc": "Attack in range",  "type": "toggle" },
+        { "name": "Inf Stamina",  "desc": "No stamina drain", "type": "toggle" }
+      ]
+    },
+    {
+      "name": "Fruits",
+      "buttons": [
+        { "name": "Fruit Sniper", "desc": "Auto grab fruits", "type": "toggle" },
+        { "name": "Show Fruits",  "desc": "ESP on map",       "type": "toggle" }
+      ]
+    },
+    {
+      "name": "Misc",
+      "buttons": [
+        { "name": "Anti AFK",    "desc": "Stay in game",    "type": "toggle" },
+        { "name": "Auto Rejoin", "desc": "On disconnect",   "type": "toggle" }
+      ]
+    }
+  ]
+}
